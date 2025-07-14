@@ -40,7 +40,7 @@
 	var counter = function() {
 		$('.js-counter').countTo({
 			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals);
+				return value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	    },
 		});
 	};
